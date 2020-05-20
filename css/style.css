@@ -8,7 +8,7 @@
 body{
     background-color:#a52a2a;
     background-image: url('../assets/winter.jpg');
-    background-size: auto 200vh;
+    background-size: auto 220vh;
     height: 115vh;
     font-family: 'Dancing Script', cursive;
     font-size: 12px;
@@ -32,13 +32,42 @@ body{
       font-size: 20px;
     }
 }
-  
 
 header{
     height: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.menu{
+    background-color: #dcdcdc;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+}
+
+ 
+.menu ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 1s, color 1s;
+}
+
+.menu a:active,
+.menu a:hover {
+  background-color: teal;
+  color: black;
 }
 
 a{
@@ -50,33 +79,25 @@ a:hover{
     text-decoration: underline;
 }
 
-.menu{
-    background-color: #dcdcdc;
-    position: fixed;
-    width: 100vw;
-    top: 0;
-    z-index: 1;
+.titulo{
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+    animation: 1s ease 1s animacaoTitulo forwards;
 }
 
-.menu a {
-    display: block;
-    padding: 10px 20px;
-    transition: background-color 1s, color 1s;
-}
-  
-.menu ul{
-    display: flex;
-    justify-content: space-around;
-}
+/* criando uma funcoa */
+@keyframes animacaoTitulo{
+    /* estado inicial */
+    from {
+        transform: scale(0.2) translateY(50vh);
+        opacity: 0;
+      }
 
-.menu li {
-    list-style: none;
-}
-
-.menu a:active,
-.menu a:hover {
-  background-color: teal;
-  color: white;
+    /* estado finial */
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
 }
 
 .site-title{
@@ -98,17 +119,48 @@ a:hover{
     border-radius: 12%;
 }
 
+.sobre,
 .contato,
 .portfolio{
     padding: 2em;
+    min-height: 20vh;
 }
 
+@media (min-width: 1200px) {
+    .conatainer{
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 1200vh;
+    }
+}
+
+.sobre h2,
 .contato h2,
 .portfolio h2{
     color:#ffffff;
     text-align: center;
     margin-bottom: 1.5mm;
     line-height: 2em;
+}
+
+.sobre p{
+    color: #ffffff;
+    margin-bottom: 1.4em;
+    text-indent: 1em;
+    text-align: justify;
+    font-size: 22px;
+}
+
+.sobre a{
+    color: cyan;
+}
+
+.sobre .avatar img{
+    float: right;
+    margin-left: 1em;
+    height: 190px;
+    width: 20%;
+    clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%);;
 }
 
 .portfolio .grid {
@@ -137,7 +189,7 @@ a:hover{
   
 .img-portfolio {
     height: 180px;
-    width: 240px;
+    width: 100%;
     object-fit: cover;
     object-position: left bottom;
     transition: transform 500ms;
@@ -146,21 +198,56 @@ a:hover{
 .img-portfolio:hover {
     transform: scale(1.2) rotate(-2deg);
 }
+
+.flip-card {
+   height: 180px;
+   perspective: 1000px;
+}
   
+.flip-card:hover .card {
+   transform: rotateY(180deg);
+}
+  
+
+.card{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 3s;
+}
+
+.card-front, 
+.card-back{
+    backface-visibility: hidden;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.card-back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, .7);
+    height: 180px;
+    width: 100%;
+    transform: rotateY(180deg);
+}
+
 .contato .icons {
     text-align: center;
 }
   
 .contato a {
     color: whitesmoke;
-    font-size: 11em;
+    font-size: 4em;
     transition: text-shadow 1s;
 }
   
 .contato a:active,
 .contato a:hover  {
     text-decoration: none;
-    text-shadow: 0px 0px 10px rgba(255,255,255,.5);
+    text-shadow: 0px 0px 10px yellow;
 }
 
 .atribute{

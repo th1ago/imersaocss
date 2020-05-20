@@ -10,31 +10,76 @@
 </head>
 <header>
     <nav class="menu">
-        <ul>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contato</a></li>
+        <ul class="conatainer">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contato">Contato</a></li>
         </ul>
     </nav>
-    <div>
+    <div class="titulo">
         <h1 class="site-title">Thiago Murakami</h1>
         <h2 class="site-subtitle">Pleno Web Design</h2>
         <h2 class="site-subtitle">Junior Data Science</h2>
         <h2 class="site-subtitle">Junior UX/UI</h2>
     </div>
 </header>
+<section class="sobre conatainer" id="sobre">
+    <h2>Sobre</h2>
+    <figure class="avatar">
+        <img src="./assets/46.jpg" alt="">
+    </figure>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Architecto esse fugiat quae at iusto officiis doloremque. 
+        Velit assumenda iusto delectus veritatis esse ullam expedita, 
+        pariatur vero neque, nostrum aperiam quos!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Architecto esse fugiat quae at iusto officiis doloremque. 
+        Velit assumenda iusto delectus veritatis esse ullam expedita, 
+        pariatur vero neque, nostrum aperiam quos!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Architecto esse fugiat quae at iusto officiis doloremque. 
+        Velit assumenda iusto delectus veritatis esse ullam expedita, 
+        pariatur vero neque, nostrum aperiam quos!
+    </p>
+    <p>
+        Apoio
+        <a href="https://alura.com.br/imersao-css"> Alura</a>
+    </p>
+</section>
 <body>
-    <section class="portfolio">
+    <section class="portfolio conatainer" id="portfolio">
         <h2>Portfolio</h2>
         <div class="grid">
-            <figure>
-                <img src="./assets/10472.jpg" alt="mobile" class="img-portfolio">
-                <figcaption class="atribute">Mobile</figcaption>
-            </figure>
-            <figure>
-                <img src="./assets/160349.jpg" alt="web design" class="img-portfolio">
-                <figcaption class="atribute">Web Design</figcaption>
-            </figure>
+            
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img src="./assets/10472.jpg" alt="mobile" class="img-portfolio">
+                        <figcaption class="atribute">Mobile</figcaption>
+                    </figure>
+                    <div class="card-back">
+                        Oi eu sou a parte de tras
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img src="./assets/160349.jpg" alt="web design" class="img-portfolio">
+                        <figcaption class="atribute">Web Design</figcaption>
+                    </figure>
+                    <div class="card-back">
+                        Oi eu sou a parte de tras
+                    </div>
+                </div>
+            </div>
+
             <figure>
                 <img src="./assets/160353.jpg" alt="projetos pessoais" class="img-portfolio">
                 <figcaption class="atribute">Projetos Pessoais</figcaption>
@@ -45,14 +90,17 @@
             </figure>
         </div>
     </section>
-    <section class="contato">
+    <section class="contato conatainer" id="contato">
         <h2>Contato</h2>
         <div class="grid icons">
-            <a target="_blanck" href="https://github.com/">
+            <a target="_blanck" href="https://github.com/th1ago">
                 <i class="fab fa-github-alt"></i>
             </a>
             <a target="_blanck" href="https://www.linkedin.com/">
                 <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a target="_blanck" href="https://www.instagram.com/">
+                <i class="fab fa-instagram"></i>
             </a>
         </div>
     </section>
